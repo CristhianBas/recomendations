@@ -1,24 +1,36 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { AppModule } from './../src/app.module';
+import { RecomendationModule } from '../src/recomendation/recomendation.module';
+import { JsonData } from '../src/recomendation/services/jsonData';
 
-describe('AppController (e2e)', () => {
+describe('RecomendationController (e2e)', () => {
   let app: INestApplication;
 
-  beforeEach(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
-    }).compile();
+  beforeAll(async () => {
+    const moduleRef = await Test.createTestingModule({
+      imports: [RecomendationModule],
+      providers: [JsonData],
+    })
+      .overrideProvider(JsonData)
+      .useValue(JsonData)
+      .compile();
 
-    app = moduleFixture.createNestApplication();
+    app = moduleRef.createNestApplication();
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/recomendation (POST)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/recomendation')
       .expect(200)
-      .expect('Hello World!');
+      .expect({});
+  });
+
+  it('test main', () => {
+    return request(app.getHttpServer())
+      .get('/recomendation')
+      .expect(200)
+      .expect({});
   });
 });
