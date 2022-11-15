@@ -44,8 +44,6 @@ http://localhost:8080/recomendation #Method GET
 ```
 ## Requests
 
-URL: http://localhost:3000/recomendation
-
 ```bash
 #GET /recomendation
 #This method get taste information
@@ -103,7 +101,10 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+URL: http://localhost:3000/recomendation
 ```
+
 
 ## Test
 
