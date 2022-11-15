@@ -28,6 +28,7 @@ Project by cristhianbastidas (cristofer0606@hotmail.com)
 
 ## Docker 
 
+```
 Clone the repository 
 
 #Run the follow commands
@@ -40,6 +41,7 @@ Open browser this URL
 
 http://localhost:8080/recomendation #Method GET
 
+```
 ## Requests
 
 URL: http://localhost:3000/recomendation
