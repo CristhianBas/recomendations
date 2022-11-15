@@ -24,7 +24,7 @@
 
 ## Description
 
-Project by cristhianbastidas (cristofer0606@hotmail.com) 
+Project by cristhianbastidas (cristofer0606@hotmail.com | cristofer0606@gmail.com) 
 
 ## Docker 
 
