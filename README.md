@@ -28,34 +28,18 @@ Project by cristhianbastidas (cristofer0606@hotmail.com)
 
 ## Docker 
 
-docker build
+Clone the repository 
 
-## Installation
+#Run the follow commands
 
-```bash
-$ npm install
-```
+docker build ./recomendations/ -t user/nestjs-dockerized
 
-## Running the app
+docker run -p 8080:3000 user/nestjs-dockerized
 
-```bash
-# development
-$ npm run start
+Open browser this URL
 
-# watch mode
-$ npm run start:dev
+http://localhost:8080/recomendation #Method GET
 
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests with coverage without main.ts 
-$ npm run test
-
-```
 ## Requests
 
 URL: http://localhost:3000/recomendation
@@ -84,7 +68,7 @@ body
 }
 ```
 
-##Response
+## Response
 
 ```
  [
@@ -98,6 +82,33 @@ body
     "Cranberry and Apple Stuffed Acorn Squash Recipe",
     "Blueberry Oatmeal Squares"
 ]
+```
+
+## Installation local project
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests with coverage without main.ts 
+$ npm run test
+
 ```
 
 ## Support
