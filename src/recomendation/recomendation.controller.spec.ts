@@ -4,12 +4,9 @@ import { JsonData } from './services/jsonData';
 
 describe('ControllerController', () => {
   let controller: RecomendationController;
-  let spyService: JsonData;
   const request = {
     taste: ['unami'],
   };
-
-  const response = ['Crock Pot Roast'];
 
   const responseGet = ['bitter', 'salty', 'sour', 'unami', 'sweet'];
   beforeEach(async () => {
@@ -21,7 +18,6 @@ describe('ControllerController', () => {
     controller = module.get<RecomendationController, RecomendationController>(
       RecomendationController,
     );
-    spyService = module.get<JsonData, JsonData>(JsonData);
   });
 
   it('get Taste', () => {

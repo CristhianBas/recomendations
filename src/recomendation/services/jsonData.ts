@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { info } from '../utils/recipes';
-import { filter } from 'rxjs';
-const recipes = require('../utils/recipes');
+import * as recipes from '../utils/recipes';
 @Injectable()
 export class JsonData {
   getData(entryData): any {
@@ -10,10 +8,10 @@ export class JsonData {
   }
 
   filterRecipes(entryData): any {
-    var filterdata = [];
-    var recipesData = recipes.info;
+    const filterdata = [];
+    const recipesData = recipes.info;
     entryData.forEach(function (taste) {
-      recipesData.forEach(function (value, key) {
+      recipesData.forEach(function (value) {
         if (value.taste.indexOf(taste) > -1) {
           if (!(filterdata.indexOf(value.name) > -1)) {
             //filterdata.push(value.name, value.taste);

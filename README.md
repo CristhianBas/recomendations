@@ -24,7 +24,11 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Project by cristhianbastidas (cristofer0606@hotmail.com) 
+
+## Docker 
+
+docker build
 
 ## Installation
 
@@ -48,14 +52,52 @@ $ npm run start:prod
 ## Test
 
 ```bash
-# unit tests
+# unit tests with coverage without main.ts 
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
+```
+## Requests
 
-# test coverage
-$ npm run test:cov
+URL: http://localhost:3000/recomendation
+
+```bash
+#GET /recomendation
+#This method get taste information
+
+```
+
+
+```bash
+#POST /recomendation
+#This method get names from recipes in json data and filter by taste
+#application/json
+body
+
+{
+    "taste": ["unami", "bitter"]
+}
+
+#or 
+
+{
+    "taste": ["salty", "sour","unami","sweet"]
+}
+```
+
+##Response
+
+```
+ [
+    "Crock Pot Roast",
+    "Roasted Asparagus",
+    "Curried Lentils and Rice",
+    "Big Night Pizza",
+    "Mic's Yorkshire Puds",
+    "Old-Fashioned Oatmeal Cookies",
+    "Curried chicken salad",
+    "Cranberry and Apple Stuffed Acorn Squash Recipe",
+    "Blueberry Oatmeal Squares"
+]
 ```
 
 ## Support
